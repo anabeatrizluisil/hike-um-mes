@@ -2,24 +2,30 @@
   <title>rede-hike</title>
 </head>
 
-<body>
-  <h1>Bem vind@s à Hike!</h1>
-
-  {{> hello}}
-  {{> info}}
-</body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<template name="Inicio">
+  <h1>Conecte-se com o mundo.</h1>
+  <p>Veja fotos e status das pessoas que segue.</p>
+  <p>Compartilhe as novidades no seu perfil.</p>
+  <p>Siga seus amigos e pessoas ao redor do mundo.</p>
+  <p><a href="#">Link</a></p>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
+<template name="Sobre">
+  <h1>Sobre</h1>
+  <h2>Nossa Visão</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut lectus euismod, bibendum mauris consectetur, tristique mauris. Etiam ac lorem tristique, porta felis nec, dictum nunc. Etiam vitae leo vitae massa eleifend porta. Phasellus in ipsum nisi. Curabitur mollis, dui ac rutrum dignissim, nisl purus tempus elit, non volutpat nisi nulla quis nisl.</p>
+  
+  <h2>Nossos Valores</h2>
+  <p>Aliquam ultricies dictum purus eget elementum. Integer lobortis orci vel accumsan auctor. Morbi accumsan neque at lacus lacinia, et sagittis ligula vehicula. Aenean et lectus ut tellus pretium feugiat quis ac mauris. Fusce cursus velit quis nulla bibendum, sed fermentum erat faucibus.</p>
 </template>
+
+<template name="Cabecalho">
+<a href="/">Início</a>
+<a href="/sobre">Sobre</a>  
+</template>
+
+<template name="LayoutPrincipal">
+  {{> Cabecalho}}
+  {{> Template.dynamic template=main }}
+</template>
+
