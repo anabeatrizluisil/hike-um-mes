@@ -10,7 +10,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand" href="#">Hike</a>
+            <a class="navbar-brand" href="/">Hike</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -24,7 +24,9 @@
                 {{/if}}
                 <li><a href="/contato">Contato</a></li>
             </ul>
+        {{#if currentUser}}    
         {{> Pesquisa}}
+        {{/if}}
         <ul class="nav navbar-nav navbar-right">
            <li>{{> atNavButton}}</li>
         </ul>
